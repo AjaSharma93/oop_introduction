@@ -1,0 +1,35 @@
+@startuml "OOP Introduction"
+
+abstract Bird {
+    +name: string
+    +color: string
+    +fly(): void
+    +{abstract} speak(): void
+}
+
+class Pigeon {
+    +eatPizza(): void
+    +sleep(): void
+}
+
+class Penguin {
+    +fly(): void
+    +sleep(): void
+}
+
+class Parrot {
+    +fly(): void
+    +sleep(): void
+}
+
+interface IDance {
+    +spin(): void
+    +doTheCaterpillar(): void
+    +jump(): void
+}
+
+Bird <|-- Pigeon
+Bird <|-- Penguin
+Bird <|-- Parrot
+IDance <|.. Bird
+@enduml
